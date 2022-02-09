@@ -43,7 +43,7 @@ buttonLogin.addEventListener('click', function(){
         console.log(login);
         
         if (login === true){
-            access.innerHTML += ` ACCESS GRANTED! You are a chosen one!`
+            access.innerHTML += ` ACCESS GRANTED! You are the chosen one!`
             access.style.color = '#3DCF5C'
             
             buttonContainer.style.display = 'block';
