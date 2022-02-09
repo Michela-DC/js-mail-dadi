@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url('https://www.playblog.it/wp-content/uploads/2021/12/matrix-riepilogo-dei-primi-tre-film.jpg');
+}
+
+main{
+    width: 70%;
+    min-height: 100vh;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+#email h1{
+    text-transform: uppercase;
+}
+
+#email label{
+    font-size: 20px;
+}
+
+#user-email{
+    color: black;
+}
+
+#btn-login{
+    padding: 5px 10px;
+    background-color: white;
+}
