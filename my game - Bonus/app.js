@@ -2,7 +2,7 @@
 // controlla che sia nella lista di chi può accedere - Creo un array in cui inserisco le email autorizzate e salvo in js gli elementi attraverso cui l'utente da l'input
 // stampa un messaggio appropriato sull’esito del controllo.
 
-const authorized = ["michela@gmail.com", "mdc@gmail.com", "heiyo@outlook.com", "webdeveloper@gmail.com"];
+const authorized = ["michela@gmail.com", "ciao@gmail.com", "heiyo@outlook.com", "webdeveloper@gmail.com"];
 console.log(authorized);
 
 const userEmailInput = document.getElementById('user-email');
@@ -23,7 +23,7 @@ const buttonNo = document.getElementById('btn-no');
 
 let login = false;
 
-// Quando l'utente clicca sul bottone mi salvo dentro una variabile l'email scritta 
+// // Quando l'utente clicca sul bottone mi salvo dentro una variabile l'email scritta e faccio partire il ciclo
 // Creo ciclo for che passa dentro l'array partendo da 0 e arriva alla fine dell'array (per arrivare a fine array uso .length)
     // --> all'interno del for creo un if per vedere se l'email dell'utente è tra quelle autorizzate - uso un valore booleano per tenerne conto
 
@@ -48,7 +48,7 @@ buttonLogin.addEventListener('click', function(){
             
             buttonContainer.style.display = 'block';
 
-            // Se sceglie il bottone yes allora si apre la pagina del gioco - devo usare addEventListener e .classList.toggle('active')
+            // Se sceglie il bottone yes allora si apre la pagina del gioco 
             buttonYes.addEventListener('click', function() {
                 emailSection.style.display = 'none';
                 diceGame.style.display = 'block';
@@ -72,7 +72,7 @@ buttonLogin.addEventListener('click', function(){
 ) 
 
 // Gioco dei dadi
-// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer usando Math.floor e Math.randon
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer usando Math.floor e Math.random
 // Stabilire il vincitore, in base a chi ha il numero più alto.  (e se pari?)
 
 const buttonRed = document.getElementById('btn-red');

@@ -1,41 +1,56 @@
-/* 
 // Chiedi all’utente la sua email,
 // controlla che sia nella lista di chi può accedere,
 // stampa un messaggio appropriato sull’esito del controllo.
 
-
 // Creo un array in cui inserisco le email autorizzate 
-const authorized = ["michela@gmail.com", "mdc@gmail.com", "heiyo@outlook.com", "webdeveloper@gmail.com"];
+const authorized = ["michela@gmail.com", "ciao@gmail.com", "heiyo@outlook.com", "webdeveloper@gmail.com"];
 console.log(authorized);
 
-const userEmail = prompt('Ciao! Inserisci qui la tua email.');
+const userEmailInput = document.getElementById('user-email');
+console.log(userEmailInput);
+const userEmail = userEmailInput.value;
 console.log(userEmail);
 
-// Creo ciclo for che passa dentro l'array partendo da 0 e arriva alla fine dell'array (per arrivare a fine array uso .length)
-    // --> all'interno del for creo un if per vedere se l'email dell'utente è tra quelle autorizzate - uso un valore booleano per tenerne conto
+const buttonLogin = document.getElementById('btn-login');
+console.log(buttonLogin);
+
+const access = document.getElementById('access');
+console.log(access);
 
 let login = false;
 
-for(let i = 0; i < authorized.length; i++){
-    console.log(authorized[i]);
 
-    if (userEmail === authorized[i]){
-        login = true;
-    } 
-}
+// // Quando l'utente clicca sul bottone mi salvo dentro una variabile l'email scritta e faccio partire il ciclo
+// Creo ciclo for che passa dentro l'array partendo da 0 e arriva alla fine dell'array (per arrivare a fine array uso .length)
+    // --> all'interno del for creo un if per vedere se l'email dell'utente è tra quelle autorizzate - uso un valore booleano per tenerne conto
 
-console.log(login);
+    buttonLogin.addEventListener('click', function(){
+        const userEmail = userEmailInput.value;
+        //prendo il valore che è stato inserito nella casella di input 
+        console.log(userEmail);
 
-if (login === true){
-    alert("Accesso autorizzato! Benvenuto!");
+        for(let i = 0; i < authorized.length; i++){
+            console.log(authorized[i]);
+        
+            if (userEmail === authorized[i]){
+                login = true;
+            } 
+        }
+        
+        console.log(login);
+        
+        if (login === true){
+            access.innerHTML += ` Accesso autorizzato! Benvenuto!`
+            access.style.color = '#3DCF5C'
+            
+        } else {
+            access.innerHTML += ` ACCESSO NEGATO! Spiacente non sei autorizzato!`;
+            access.style.color = 'red';
+        }
+    }
+) 
 
-} else {
-    alert ("ACCESSO NEGATO! Spiacente non sei autorizzato!")
-}
-
-*/
-
-
+/*
 // Gioco dei dadi
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi ha il numero più alto.  (e se pari?)
@@ -59,6 +74,7 @@ if( userNumber > computerNumber ) {
 } else {
     console.log("PARI!!!");
 }
+*/
 
 
 
