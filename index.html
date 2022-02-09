@@ -12,19 +12,43 @@
     <main>
 
         <section id="email">
-            <h1>Are you one of the chosen ones?</h1>
+
+            <div class="container">
+                <h1>Are you a chosen one?</h1>
+        
+                <label for="user-email">Insert your e-mail</label>
+                <input type="text" id="user-email" name="user-email">
+                <button type="button" id="btn-login">Login</button>
+            
+                <h3 id="access"></h3>
     
-            <label for="user-email">Insert your email</label>
-            <input type="text" id="user-email" name="user-email">
-            <button type="button" id="btn-login">Login</button>
-        
-            <h3 id="access"></h3>
-        
-            <script src="app.js"></script>
+                <div id="btn-container">
+                    <h3 id="play-game">Do you want to play a game?</h3>
+                    <button type="button" id="btn-yes">yes</button>
+                    <button type="button" id="btn-no">no</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="dadi">
+
+            <div class="container">
+                <h1> Choose a color</h1>
+    
+                <div class="pill-container">
+                    <button type="button" id="btn-red">red</button>
+                    <button type="button" id="btn-blue">blue</button>
+                </div>
+    
+                <h3 id="result"></h3>
+            </div>
+
 
         </section>
 
     </main>
-    
+
+    <script src="app.js"></script> 
 </body>
 </html>
