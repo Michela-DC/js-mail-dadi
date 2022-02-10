@@ -19,36 +19,35 @@ console.log(access);
 
 let login = false;
 
-
 // // Quando l'utente clicca sul bottone mi salvo dentro una variabile l'email scritta e faccio partire il ciclo
 // Creo ciclo for che passa dentro l'array partendo da 0 e arriva alla fine dell'array (per arrivare a fine array uso .length)
     // --> all'interno del for creo un if per vedere se l'email dell'utente è tra quelle autorizzate - uso un valore booleano per tenerne conto
 
-    buttonLogin.addEventListener('click', function(){
-        const userEmail = userEmailInput.value;
-        //prendo il valore che è stato inserito nella casella di input 
-        console.log(userEmail);
+buttonLogin.addEventListener('click', function(){
+    const userEmail = userEmailInput.value;
+    //prendo il valore che è stato inserito nella casella di input 
+    console.log(userEmail);
 
-        for(let i = 0; i < authorized.length; i++){
-            console.log(authorized[i]);
-        
-            if (userEmail === authorized[i]){
-                login = true;
-            } 
-        }
-        
-        console.log(login);
-        
-        if (login === true){
-            access.innerHTML += ` Accesso autorizzato! Benvenuto!`
-            access.style.color = '#3DCF5C'
-            
-        } else {
-            access.innerHTML += ` ACCESSO NEGATO! Spiacente non sei autorizzato!`;
-            access.style.color = 'red';
-        }
+    for(let i = 0; i < authorized.length; i++){
+        console.log(authorized[i]);
+    
+        if (userEmail === authorized[i]){
+            login = true;
+        } 
     }
-) 
+        
+    console.log(login);
+        
+    if (login === true){ 
+    // basta anche solo scrivere if (find)
+        access.innerHTML += ` Accesso autorizzato! Benvenuto!`
+        access.style.color = '#3DCF5C'
+            
+    } else {
+        access.innerHTML += ` ACCESSO NEGATO! Spiacente non sei autorizzato!`;
+        access.style.color = 'red';
+    }
+} ) 
 
 /*
 // Gioco dei dadi

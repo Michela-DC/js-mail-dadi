@@ -2,7 +2,7 @@
 // controlla che sia nella lista di chi può accedere - Creo un array in cui inserisco le email autorizzate e salvo in js gli elementi attraverso cui l'utente da l'input
 // stampa un messaggio appropriato sull’esito del controllo.
 
-const authorized = ["michela@gmail.com", "ciao@gmail.com", "heiyo@outlook.com", "webdeveloper@gmail.com"];
+const authorized = ["michela@gmail.com", "neo@gmail.com", "heiyo@outlook.com", "webdeveloper@gmail.com"];
 console.log(authorized);
 
 const userEmailInput = document.getElementById('user-email');
@@ -95,7 +95,7 @@ console.log(computerNumber);
 buttonRed.addEventListener('click', function(){
         
         if( userNumber > computerNumber ) {
-            result.innerHTML += ` You beat the computer! Your number ${userNumber} > Computer number ${computerNumber} `;
+            result.innerHTML += ` You won! Your number ${userNumber} > Computer number ${computerNumber} `;
         
         } else if (computerNumber > userNumber) {
             result.innerHTML += ` The computer won! Computer number ${computerNumber} > Your number ${userNumber}`;
